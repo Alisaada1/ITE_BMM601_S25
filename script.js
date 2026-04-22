@@ -88,3 +88,10 @@ images.forEach(img => {
         });
     }
 });
+
+document.querySelectorAll('a[href="home.html"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.replace('home.html');
+    });
+});
