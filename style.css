@@ -293,6 +293,7 @@ body {
 }
 
 
+
 .image-card {
     background: #0f172a;
     border: 1px solid #1e293b;
@@ -666,3 +667,22 @@ body {
 #lightbox.active img {
     transform: scale(1);
 }
+
+
+@media (max-width: 768px) {
+    .back-btn-container {
+        position: relative !important;
+        margin: 40px auto !important;
+        bottom: 0 !important;
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    footer {
+        margin-top: 60px !important;
+        padding: 20px 0;
+    }
+}
+
+
