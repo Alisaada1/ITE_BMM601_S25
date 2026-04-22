@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الإبداع الرقمي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+
+    <div class="fixed-container">
+        <header class="gallery-header">
+            <div class="header-top">
+                <img src="img/uni-logo.png" alt="University Logo" class="uni-logo">
+                <span class="course-code">ITE_BMM601 | S25</span>
+            </div>
+            <div class="header-line"></div>
+            <div class="header-main">
+                <h1>معرض الإبداع الرقمي</h1>
+                <p>استعراض للصور المولدة بواسطة تقنيات الذكاء الاصطناعي التوليدي</p>
+            </div>
+        </header>
+
+        <main class="images-grid-square">
+            <div class="image-card">
+                <div class="img-wrapper" id="card-1">
+                    <img src="img/img1.webp" alt="Future City">
+                    <div class="details-overlay">
+                        <div class="overlay-inner">
+                            <span class="tool-tag">DALL-E 3</span>
+                            <p class="prompt-long">Prompt: A majestic futuristic cinematic city at sunset with towering glass skyscrapers and flying vehicles.</p>
+                            <button class="close-btn" onclick="toggleDetails('card-1')">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>المدينة المستقبلية</h3>
+                    <p class="img-desc">تصور خيالي للمدن الذكية في المستقبل البعيد.</p>
+                    <button class="toggle-btn" onclick="toggleDetails('card-1')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="img-wrapper" id="card-2">
+                    <img src="img/img2.webp" alt="Creative">
+                    <div class="details-overlay">
+                        <div class="overlay-inner">
+                            <span class="tool-tag">DALL-E 3</span>
+                            <p class="prompt-long">Prompt: Vibrant creative elements and digital paint splashing from a laptop screen.</p>
+                            <button class="close-btn" onclick="toggleDetails('card-2')">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>انفجار الإبداع</h3>
+                    <p class="img-desc">تجسيد فني لتدفق الأفكار والموسيقى من العالم الرقمي.</p>
+                    <button class="toggle-btn" onclick="toggleDetails('card-2')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="img-wrapper" id="card-3">
+                    <img src="img/img3.webp" alt="Nature">
+                    <div class="details-overlay">
+                        <div class="overlay-inner">
+                            <span class="tool-tag">Leonardo AI</span>
+                            <p class="prompt-long">Prompt: Magical glowing forest with bioluminescent plants reflecting in a crystal lake.</p>
+                            <button class="close-btn" onclick="toggleDetails('card-3')">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>الطبيعة الساحرة</h3>
+                    <p class="img-desc">عالم خيالي يبرز جمال الطبيعة بألوان غير واقعية.</p>
+                    <button class="toggle-btn" onclick="toggleDetails('card-3')">التفاصيل</button>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <div class="img-wrapper" id="card-4">
+                    <img src="img/img4.webp" alt="Human AI">
+                    <div class="details-overlay">
+                        <div class="overlay-inner">
+                            <span class="tool-tag">Midjourney</span>
+                            <p class="prompt-long">Prompt: A stunning fusion of a natural human face and digital neural networks.</p>
+                            <button class="close-btn" onclick="toggleDetails('card-4')">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <h3>تناغم الإنسان والآلة</h3>
+                    <p class="img-desc">لوحة تعبر عن الاندماج العميق بين الوعي البشري والذكاء الرقمي.</p>
+                    <button class="toggle-btn" onclick="toggleDetails('card-4')">التفاصيل</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="gallery-footer">
+            <div class="footer-line"></div>
+            <div class="footer-content">
+                <p class="copyrights">جميع الحقوق محفوظة © 2026 - ITE S25</p>
+                <div class="footer-links">
+                    <a href="home.html" class="nav-button primary">العودة للرئيسية</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleDetails(wrapperId) {
+            const wrapper = document.getElementById(wrapperId);
+            wrapper.classList.toggle('show-details');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
