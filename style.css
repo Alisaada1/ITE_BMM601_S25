@@ -697,3 +697,33 @@ body {
     }
 }
 
+
+.exit-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 35px;
+    background: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    width: fit-content;
+}
+
+.exit-btn:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: translateY(-2px);
+}
+
+.pulse {
+    animation: pulseEffect 3s infinite;
+}
+
+
+
