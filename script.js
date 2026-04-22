@@ -88,3 +88,12 @@ images.forEach(img => {
         });
     }
 });
+
+function exitSite() {
+    if (document.referrer !== "") {
+        window.history.back();
+    } else {
+        window.location.href = "https://www.google.com";
+    }
+}
+
