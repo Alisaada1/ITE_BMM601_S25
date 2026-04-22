@@ -95,7 +95,6 @@ images.forEach(img => {
 
 function exitSite() {
     let destination = sessionStorage.getItem('originPage');
-    window.location.href = destination;
+    window.location.replace(destination);
 }
-
 
