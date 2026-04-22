@@ -1,3 +1,7 @@
+if (!sessionStorage.getItem('originPage')) {
+    sessionStorage.setItem('originPage', document.referrer || "https://www.google.com");
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Part 1: Page Transition
@@ -90,10 +94,8 @@ images.forEach(img => {
 });
 
 function exitSite() {
-    if (document.referrer !== "") {
-        window.history.back();
-    } else {
-        window.location.href = "https://www.google.com";
-    }
+    let destination = sessionStorage.getItem('originPage');
+    window.location.href = destination;
 }
+
 
