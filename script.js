@@ -89,9 +89,18 @@ images.forEach(img => {
     }
 });
 
-document.querySelectorAll('a[href="home.html"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+if (window.location.pathname.endsWith('home.html') || window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function() {
+        window.history.pushState(null, "", window.location.href);
+    };
+}
+
+document.addEventListener('click', function(e) {
+    const anchor = e.target.closest('a');
+    if (anchor && (anchor.getAttribute('href') === 'home.html' || anchor.getAttribute('href') === 'index.html')) {
         e.preventDefault();
-        window.location.replace('home.html');
-    });
+        window.location.replace(anchor.getAttribute('href'));
+    }
 });
+
